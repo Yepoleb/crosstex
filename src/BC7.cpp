@@ -232,9 +232,6 @@ float OptimizeRGBA(
         // Calculate new steps
         HDRColorA pSteps[BC7_MAX_INDICES];
 
-        LDRColorA lX = LDRColorA::FromHDRColorA(X);
-        LDRColorA lY = LDRColorA::FromHDRColorA(Y);
-
         for (size_t iStep = 0; iStep < cSteps; iStep++)
         {
             pSteps[iStep] = X * pC[iStep] + Y * pD[iStep];

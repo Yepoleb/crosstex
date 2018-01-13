@@ -590,6 +590,8 @@ public:
         c_int.r = FloatToINT(c_hdr.r, bSigned);
         c_int.g = FloatToINT(c_hdr.g, bSigned);
         c_int.b = FloatToINT(c_hdr.b, bSigned);
+
+        return c_int;
     }
 
     void SignExtend(const LDRColorA& prec)
