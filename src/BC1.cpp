@@ -72,4 +72,9 @@ void EncodeBC1(uint8_t *pBC, const HDRColorA *pColor, float threshold, uint32_t 
     EncodeBC1(pBC1, Color, true, threshold, flags);
 }
 
+void EncodeBC1(uint8_t *pBC, const HDRColorA *pColor, uint32_t flags)
+{
+    EncodeBC1(pBC, pColor, 0.5f, flags);
+}
+
 }

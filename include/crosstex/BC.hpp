@@ -43,9 +43,12 @@ void DecodeBC6HU(HDRColorA *pColor, const uint8_t *pBC);
 void DecodeBC6HS(HDRColorA *pColor, const uint8_t *pBC);
 void DecodeBC7(HDRColorA *pColor, const uint8_t *pBC);
 
-void EncodeBC1(uint8_t *pBC, const HDRColorA *pColor, float threshold, uint32_t flags);
-// BC1 requires one additional parameter, so it doesn't match signature of BC_ENCODE above
 
+
+
+void EncodeBC1(uint8_t *pBC, const HDRColorA *pColor, uint32_t flags);
+// BC1 may have one additional parameter, so it doesn't match signature of BC_ENCODE above
+void EncodeBC1(uint8_t *pBC, const HDRColorA *pColor, float threshold, uint32_t flags);
 void EncodeBC2(uint8_t *pBC, const HDRColorA *pColor, uint32_t flags);
 void EncodeBC3(uint8_t *pBC, const HDRColorA *pColor, uint32_t flags);
 void EncodeBC4U(uint8_t *pBC, const HDRColorA *pColor, uint32_t flags);
